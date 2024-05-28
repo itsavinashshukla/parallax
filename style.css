@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#wrapper {
+    height: 100vh;
+    overflow-x: hidden;             
+    overflow-y: auto;
+    perspective: 10px; 
+    /* perspective is used to on 3d mode value is not given importance; */
+
+}
+
+.container {
+    position: relative;
+    /* relative is used as it shows the relation of image from its ancestor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+    /* z index is used to tell that which image will be on the top or bottom 
+    basically it decides the layering  */
+}
+
+.background {
+    transform: translateZ(-40px) scale(5.1);
+}
+
+.foreground {
+    transform: translateZ(-20px) scale(3);
+}
+
+.background,
+.foreground {
+    position: absolute;
+    /* absolute is used , so that the image should overlap each other */
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+    /* it fits the image to the screen  */
+}
+
+h1{
+    position: absolute;
+    top: 3rem;
+    /* left: 25%; */
+    font-size: 10rem;
+    letter-spacing: 4px;
+    color: aliceblue;
+    text-shadow: black;
+}
+
+section{
+    background-color:  rgb(106, 140, 213);
+    color: white;
+}
+.secheading{
+    font-size: 5rem;
+    padding:0 10rem;
+}
+.text{
+    font-size:1.5rem;
+    padding: 0 10rem;
+    margin: 5rem 0;
+    color: black;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+.bg{
+    position: relative;
+    width: 100%;
+    background-attachment: fixed;
+    /* this will fix the background image and will not aloow bg to move  */
+    background-position: center;
+    background-size: cover;
+    /* it adjust image according to scren  */
+    height: 500px;
+
+}
+.desc{
+    position: absolute;
+    background-color: white;
+    padding: 0.5rm 2.5rm;
+    top: 50%;
+    left: 50%;
+    color: black;
+    font-size: 3.5rem;
+    font-weight: 600;
+    transform: translatex(-50%) translateY(-50%);
+    /* to align in center  */
+}
+
+.bg1{
+    background-image: url(./assets/Royal-Enfield-Bullet-Strandard-Wallpaper.jpg) ;
+}
+
+.bg2{
+    background-image: url(./assets/paragliding-above-cliffs-and-valleys-c7c2lh5j37iy271c.webp) ;
+}
+
+.bg3{
+    background-image: url(./assets/aaaaaa.avif) ;
+}
